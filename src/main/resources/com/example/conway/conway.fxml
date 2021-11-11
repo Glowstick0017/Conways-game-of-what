@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1c1c1e" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.ConwayController">
-   <GridPane fx:id="gameGrid" layoutX="79.0" layoutY="58.0" onMouseClicked="#cellClicked" prefHeight="230.0" prefWidth="431.0">
+<AnchorPane  stylesheets="@style.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="600.0" styleClass="anchor" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.ConwayController">
+   <GridPane fx:id="gameGrid" layoutX="78.0" layoutY="86.0" onMouseClicked="#cellClicked" prefHeight="230.0" prefWidth="431.0">
    </GridPane>
-   <Button fx:id="startStop" layoutX="173.0" layoutY="334.0" mnemonicParsing="false" onAction="#startStopClicked" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #097adb;" text="Start" textFill="WHITE" />
-   <Button layoutX="356.0" layoutY="334.0" mnemonicParsing="false" onAction="#helpClicked" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #097adb;" text="Help" textFill="WHITE" />
-   <Button layoutX="266.0" layoutY="334.0" mnemonicParsing="false" onAction="#resetClicked" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #097adb;" text="Reset" textFill="WHITE" />
+   <Button fx:id="startStop" layoutX="172.0" layoutY="356.0" mnemonicParsing="false" onAction="#startStopClicked" prefHeight="25.0" prefWidth="68.0" text="Start" />
+   <Button layoutX="354.0" layoutY="356.0" mnemonicParsing="false" onAction="#helpClicked" prefHeight="17.0" prefWidth="68.0" text="Help" />
+   <Button layoutX="266.0" layoutY="356.0" mnemonicParsing="false" onAction="#resetClicked" prefHeight="25.0" prefWidth="68.0" text="Reset" />
+   <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="154.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@icon.png"/>
+   </ImageView>
+   <Label layoutX="206.0" layoutY="26.0" text="Conway's Game of Life">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
 </AnchorPane>

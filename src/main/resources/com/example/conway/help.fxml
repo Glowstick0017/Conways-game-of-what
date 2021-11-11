@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17">
+    <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="147.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@icon.png" />
+    </ImageView>
+    <Label layoutX="204.0" layoutY="37.0" text="Conway's Game of Life" textFill="WHITE">
+        <font>
+          <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="248.0" layoutY="85.0" text="Built by:" textFill="WHITE" />
+    <ScrollPane layoutX="83.0" layoutY="160.0" prefHeight="200.0" prefWidth="440.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="425.0" />
+    </ScrollPane>
+    <Hyperlink layoutX="303.0" layoutY="82.0" text="Glowstick" />
+    <MenuButton layoutX="83.0" layoutY="116.0" mnemonicParsing="false" text="MenuButton">
+      <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+      </items>
+    </MenuButton>
+</AnchorPane>

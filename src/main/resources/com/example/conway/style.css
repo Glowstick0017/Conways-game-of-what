@@ -1,0 +1,18 @@
+.anchor {
+    -fx-background-color: #1c1c1e ;
+}
+.label {
+    -fx-text-fill: white;
+}
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: #097adb;
+}
+.menu-button {
+    -fx-text-fill: white;
+    -fx-background-color: #097adb;
+    -fx-mark-color: white;
+}
+.scroll-pane {
+    -fx-background-color: #1c1c1e;
+}
