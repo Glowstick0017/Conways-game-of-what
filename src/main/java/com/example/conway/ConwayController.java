@@ -55,13 +55,15 @@ public class ConwayController {
                     life.tick(startStop.getScene());
                     lastUpdate = now;
                 }
+                if (startStop.getText().equals("Start")) {
+                    this.stop();
+                }
             }
         };
         if (startStop.getText().equals("Start")) {
             runAnimation.start();
             startStop.setText("Stop");
         } else {
-            runAnimation.stop();
             startStop.setText("Start");
         }
     }
