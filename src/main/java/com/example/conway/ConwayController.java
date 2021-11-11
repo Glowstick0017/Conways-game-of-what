@@ -37,7 +37,7 @@ public class ConwayController {
 
     public static void changeCell(Scene scene, int row, int col) {
         Pane p = (Pane) scene.lookup("#" + row  + "," + col);
-        if (Life.getGrid()[row][col] == 0) {
+        if (Life.getGrid()[row][col] == 1) {
             p.setStyle("-fx-background-color:#097adb;-fx-border-color: #1c1c1e;-fx-border-width: 1;");
         } else {
             p.setStyle("-fx-background-color:#535358;-fx-border-color: #1c1c1e;-fx-border-width: 1;");
