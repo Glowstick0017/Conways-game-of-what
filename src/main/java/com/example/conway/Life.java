@@ -30,27 +30,23 @@ public class Life {
     }
 
     public void tick(Scene scene) {
+        int[][] next = new int[45][25];
         for (int i = 0; i<45; i++) {
             for (int j = 0; j<25; j++) {
-                // if the grid is alive
-                if (grid[i][j] == 1) {
-                    // if the cell does not have 3 or 3 neighbors
-                    if (getAliveNeighbors(i,j) != 2 && getAliveNeighbors(i,j) != 3) {
-                        // die
-                        grid[i][j] = 0;
-                        ConwayController.changeCell(scene, i, j);
-                    }
-                    // if the cell is dead
-                } else if (grid[i][j] == 0) {
-                    // if the cell has 3 neighbors
-                    if (getAliveNeighbors(i,j) == 3) {
-                        // born
-                        grid[i][j] = 1;
-                        ConwayController.changeCell(scene, i, j);
-                    }
+                int neighbors = getAliveNeighbors(i,j);
+
+                if (neighbors == 3) {
+                    next[i][j] = 1;
+                    ConwayController.changeCell(scene, i, j, next);
+                } else if (neighbors < 2 || neighbors > 3) {
+                    next[i][j] = 0;
+                    ConwayController.changeCell(scene, i, j, next);
+                } else {
+                    next[i][j] = grid[i][j];
                 }
             }
         }
+        grid = next;
     }
 
     public int getAliveNeighbors(int row, int column) {

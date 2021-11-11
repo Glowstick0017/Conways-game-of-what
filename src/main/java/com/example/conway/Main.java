@@ -19,6 +19,7 @@ public class Main extends Application {
         Life life = new Life(45,25);
         ConwayController cc = fxmlLoader.getController();
         cc.setLife(life);
+        cc.setFxmlLoader(fxmlLoader);
         life.init(fxmlLoader);
         stage.setTitle("Conway's Game of Life");
         stage.setScene(scene);

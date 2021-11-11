@@ -2,6 +2,7 @@ package com.example.conway;
 
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -15,6 +16,7 @@ public class ConwayController {
     public GridPane gameGrid;
     public Button startStop;
     private Life life;
+    private FXMLLoader fxmlLoader;
 
     public void cellClicked(MouseEvent mouseEvent) {
         Pane p = (Pane) mouseEvent.getSource();
@@ -35,9 +37,9 @@ public class ConwayController {
         }
     }
 
-    public static void changeCell(Scene scene, int row, int col) {
+    public static void changeCell(Scene scene, int row, int col, int[][] grid) {
         Pane p = (Pane) scene.lookup("#" + row  + "," + col);
-        if (Life.getGrid()[row][col] == 1) {
+        if (grid[row][col] == 1) {
             p.setStyle("-fx-background-color:#097adb;-fx-border-color: #1c1c1e;-fx-border-width: 1;");
         } else {
             p.setStyle("-fx-background-color:#535358;-fx-border-color: #1c1c1e;-fx-border-width: 1;");
@@ -73,5 +75,13 @@ public class ConwayController {
 
     public void setLife(Life life) {
         this.life = life;
+    }
+
+    public void resetClicked(ActionEvent event) {
+        life.init(fxmlLoader);
+    }
+
+    public void setFxmlLoader(FXMLLoader fxmlLoader) {
+        this.fxmlLoader = fxmlLoader;
     }
 }
