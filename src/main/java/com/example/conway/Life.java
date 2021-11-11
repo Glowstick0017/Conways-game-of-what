@@ -29,6 +29,15 @@ public class Life {
         }
     }
 
+    public void reset(Scene scene) {
+        for (int i = 0; i<45; i++) {
+            for (int j = 0; j<25; j++) {
+                grid[i][j] = 0;
+                ConwayController.changeCell(scene, i, j, grid);
+            }
+        }
+    }
+
     public void tick(Scene scene) {
         int[][] next = new int[45][25];
         for (int i = 0; i<45; i++) {

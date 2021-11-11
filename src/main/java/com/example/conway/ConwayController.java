@@ -78,7 +78,7 @@ public class ConwayController {
     }
 
     public void resetClicked(ActionEvent event) {
-        life.init(fxmlLoader);
+        life.reset(startStop.getScene());
     }
 
     public void setFxmlLoader(FXMLLoader fxmlLoader) {
