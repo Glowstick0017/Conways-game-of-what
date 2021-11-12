@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -20,8 +21,8 @@ import java.util.concurrent.TimeUnit;
 public class ConwayController {
     public GridPane gameGrid;
     public Button startStop;
+    public Slider slider;
     private Life life;
-    private FXMLLoader fxmlLoader;
 
     public void cellClicked(MouseEvent mouseEvent) {
         Pane p = (Pane) mouseEvent.getSource();
@@ -58,7 +59,7 @@ public class ConwayController {
             @Override
             public void handle(long now) {
                 // only update once every second
-                if ((now - lastUpdate) >= TimeUnit.MILLISECONDS.toNanos(500)) {
+                if ((now - lastUpdate) >= TimeUnit.MILLISECONDS.toNanos((long) slider.getValue())) {
                     life.tick(startStop.getScene());
                     lastUpdate = now;
                 }
@@ -91,9 +92,5 @@ public class ConwayController {
 
     public void resetClicked(ActionEvent event) {
         life.reset(startStop.getScene());
-    }
-
-    public void setFxmlLoader(FXMLLoader fxmlLoader) {
-        this.fxmlLoader = fxmlLoader;
     }
 }

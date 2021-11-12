@@ -1,5 +1,6 @@
-.anchor {
-    -fx-background-color: #1c1c1e ;
+.anchor,
+.scroll-pane{
+    -fx-background-color: #1c1c1e;
 }
 .label {
     -fx-text-fill: white;
@@ -13,6 +14,18 @@
     -fx-background-color: #097adb;
     -fx-mark-color: white;
 }
-.scroll-pane {
-    -fx-background-color: #1c1c1e;
+
+.scroll-bar:vertical *.increment-button,
+.scroll-bar:vertical *.decrement-button,
+.scrollinternal {
+    -fx-background-color: #404044;
+}
+
+.scroll-bar:vertical *.increment-arrow,
+.scroll-bar:vertical *.decrement-arrow{
+    -fx-background-color: black;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #097adb;
 }
