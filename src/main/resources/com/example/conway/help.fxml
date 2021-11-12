@@ -9,26 +9,30 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-            prefWidth="541.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" styleClass="anchor"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.HelpController">
     <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="114.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@icon.png" />
     </ImageView>
-    <Label layoutX="175.0" layoutY="38.0" text="Conway's Game of Life" textFill="WHITE">
+    <Label layoutX="175.0" layoutY="38.0" text="Conway's Game of Life">
         <font>
           <Font name="System Bold" size="24.0" />
         </font>
     </Label>
-    <Label layoutX="206.0" layoutY="85.0" text="Built by:" textFill="WHITE" />
+    <Label layoutX="206.0" layoutY="85.0" text="Built by:" />
     <ScrollPane layoutX="50.0" layoutY="160.0" prefHeight="200.0" prefWidth="440.0">
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="425.0" styleClass="scrollinternal" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="419.0" styleClass="scrollinternal">
+            <Text fx:id="textArea" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test" wrappingWidth="380.0" />
+        </AnchorPane>
     </ScrollPane>
-    <Hyperlink layoutX="270.0" layoutY="82.0" text="Glowstick" />
+    <Hyperlink layoutX="270.0" layoutY="82.0" text="Glowstick" onAction="#glowstickClicked"/>
     <MenuButton layoutX="50.0" layoutY="116.0" mnemonicParsing="false" text="MenuButton">
       <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem mnemonicParsing="false" text="About" />
+          <MenuItem mnemonicParsing="false" text="Rules" />
+          <MenuItem mnemonicParsing="false" text="Controls" />
       </items>
     </MenuButton>
 </AnchorPane>

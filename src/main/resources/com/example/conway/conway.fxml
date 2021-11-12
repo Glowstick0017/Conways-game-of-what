@@ -9,8 +9,10 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="600.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.ConwayController">
-   <GridPane fx:id="gameGrid" layoutX="85.0" layoutY="87.0" onMouseClicked="#cellClicked" prefHeight="230.0" prefWidth="431.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0"
+            prefWidth="600.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.ConwayController">
+   <GridPane styleClass="grid" fx:id="gameGrid" layoutX="85.0" layoutY="87.0" onMouseClicked="#cellClicked" prefHeight="230.0" prefWidth="431.0">
    </GridPane>
    <Button fx:id="startStop" layoutX="172.0" layoutY="356.0" mnemonicParsing="false" onAction="#startStopClicked" prefHeight="25.0" prefWidth="68.0" text="Start" />
    <Button layoutX="354.0" layoutY="356.0" mnemonicParsing="false" onAction="#helpClicked" prefHeight="17.0" prefWidth="68.0" text="Help" />

@@ -19,7 +19,8 @@ public class Life {
                 Pane p = new Pane();
                 p.setMinHeight(10);
                 p.setMinWidth(10);
-                p.setStyle("-fx-background-color:#535358;-fx-border-color: #1c1c1e;-fx-border-width: 1;");
+                //p.setStyle("-fx-background-color:#535358;-fx-border-color: #1c1c1e;-fx-border-width: 1;");
+                p.getStyleClass().setAll("dead");
                 p.setOnMouseClicked(cc::cellClicked);
                 p.setId(i + "," + j);
                 grid[i][j] = 0;
