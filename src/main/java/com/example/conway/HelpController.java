@@ -2,15 +2,15 @@ package com.example.conway;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 
 public class HelpController {
-    public Text aboutText;
-    public Text rulesText;
-    public Text controlsText;
+    public Label aboutText;
+    public Label rulesText;
+    public Label controlsText;
     public ScrollPane aboutPane;
     public ScrollPane rulesPane;
     public ScrollPane controlPane;

@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="541.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.HelpController">
     <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="114.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@icon.png" />
@@ -23,42 +16,42 @@
     <Label layoutX="206.0" layoutY="94.0" text="Built by:" />
     <ScrollPane fx:id="aboutPane" layoutX="50.0" layoutY="125.0" prefHeight="200.0" prefWidth="440.0">
         <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="419.0" styleClass="scrollinternal">
-            <Text fx:id="aboutText" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test" wrappingWidth="380.0" />
+            <Label fx:id="aboutText" layoutX="14.0" layoutY="15.0" text="test" wrapText="true" maxWidth="380.0" />
         </AnchorPane>
     </ScrollPane>
     <ScrollPane fx:id="rulesPane" layoutX="50.0" layoutY="125.0" prefHeight="200.0" prefWidth="440.0" visible="false">
         <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="419.0" styleClass="scrollinternal">
-            <Text fx:id="rulesText" fill="WHITE" layoutX="20.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test" wrappingWidth="240.0" />
-         <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For a cell that is populated:">
+            <Label fx:id="rulesText" layoutX="20.0" layoutY="45.0" text="test" wrapText="true" maxWidth="240.0" />
+         <Label layoutX="14.0" layoutY="15.0" text="For a cell that is populated:">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
-         </Text>
-            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         </Label>
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@solitude.png" />
             </ImageView>
-            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@overpopulation.png" />
             </ImageView>
-            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@survive.png" />
             </ImageView>
-            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@born.png" />
             </ImageView>
-         <Text fill="WHITE" layoutX="14.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For a space that is empty or unpopulated:">
+         <Label layoutX="14.0" layoutY="247.0" text="For a space that is empty or unpopulated:">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
-         </Text>
+         </Label>
         </AnchorPane>
     </ScrollPane>
     <ScrollPane fx:id="controlPane" layoutX="50.0" layoutY="125.0" prefHeight="200.0" prefWidth="440.0" visible="false">
         <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="419.0" styleClass="scrollinternal">
-            <Text fx:id="controlsText" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a pattern from the               or make one yourself by clicking on the cells. The 'Start' button advances the game by several generations (each new generation corresponding to one iteration of the rules)." wrappingWidth="380.0" />
+            <Label fx:id="controlsText" layoutX="14.0" layoutY="15.0" text="Choose a pattern from the               or make one yourself by clicking on the cells. The 'Start' button advances the game by several generations (each new generation corresponding to one iteration of the rules)." wrapText="true" maxWidth="380.0" />
         </AnchorPane>
     </ScrollPane>
-    <Hyperlink fx:id="lexiconLink" layoutX="205.0" layoutY="137.0" onMouseClicked="#lexiconClick" text="Lexicon" textFill="#00aaf8" visible="false"/>
+    <Hyperlink fx:id="lexiconLink" layoutX="206.0" layoutY="138.0" onMouseClicked="#lexiconClick" text="Lexicon" textFill="#00aaf8" visible="false"/>
     <Hyperlink layoutX="274.0" layoutY="91.0" onAction="#glowstickClicked" text="Glowstick" />
     <MenuButton fx:id="menuButton" layoutX="50.0" layoutY="90.0" mnemonicParsing="false" text="About">
       <items>
