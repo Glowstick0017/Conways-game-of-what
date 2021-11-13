@@ -9,14 +9,12 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0"
-            prefWidth="600.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.ConwayController">
-   <GridPane styleClass="grid" fx:id="gameGrid" layoutX="85.0" layoutY="87.0" onMouseClicked="#cellClicked" prefHeight="230.0" prefWidth="431.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="600.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.ConwayController">
+   <GridPane fx:id="gameGrid" layoutX="85.0" layoutY="87.0" onMouseClicked="#cellClicked" prefHeight="230.0" prefWidth="431.0" styleClass="grid">
    </GridPane>
-   <Button fx:id="startStop" layoutX="172.0" layoutY="356.0" mnemonicParsing="false" onAction="#startStopClicked" prefHeight="25.0" prefWidth="68.0" text="Start" />
-   <Button layoutX="354.0" layoutY="356.0" mnemonicParsing="false" onAction="#helpClicked" prefHeight="17.0" prefWidth="68.0" text="Help" />
-   <Button layoutX="266.0" layoutY="356.0" mnemonicParsing="false" onAction="#resetClicked" prefHeight="25.0" prefWidth="68.0" text="Reset" />
+   <Button fx:id="startStop" layoutX="175.0" layoutY="356.0" mnemonicParsing="false" onAction="#startStopClicked" prefHeight="25.0" prefWidth="68.0" text="Start" />
+   <Button layoutX="355.0" layoutY="356.0" mnemonicParsing="false" onAction="#helpClicked" prefHeight="17.0" prefWidth="68.0" text="Help" />
+   <Button layoutX="265.0" layoutY="356.0" mnemonicParsing="false" onAction="#resetClicked" prefHeight="25.0" prefWidth="68.0" text="Reset" />
    <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="154.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@icon.png" />
    </ImageView>
@@ -25,5 +23,9 @@
          <Font name="System Bold" size="24.0" />
       </font>
    </Label>
-   <Slider fx:id="slider" layoutX="31.0" layoutY="114.0" max="1500.0" min="1.0" orientation="VERTICAL" value="500.0" />
+   <Slider fx:id="slider" layoutX="31.0" layoutY="114.0" max="1000.0" min="1" orientation="VERTICAL" rotate="180" value="500.0" />
+   <ImageView cache="true" cacheHint="QUALITY" fitHeight="25.0" fitWidth="32.0" layoutX="24.0" layoutY="87.0"
+              pickOnBounds="true" preserveRatio="true">
+      <Image url="@speedometer.png"/>
+   </ImageView>
 </AnchorPane>

@@ -86,8 +86,13 @@ public class ConwayController {
         Stage stage = new Stage();
         stage.setScene(new Scene(fxmlLoader.load()));
         HelpController hc = fxmlLoader.getController();
-        hc.textArea.setText("The Game of Life is not your typical computer game. It is a cellular automaton, and was invented by Cambridge mathematician John Conway.\n\n" +
-                "This game became widely known when it was mentioned in an article published by Scientific American in 1970. It consists of a collection of cells which, based on a few mathematical rules, can live, die or multiply. Depending on the initial conditions, the cells form various patterns throughout the course of the game.");
+        hc.aboutText.setText("The Game of Life is not your typical computer game. It is a cellular automaton, and was invented by Cambridge mathematician John Conway.\n\n" +
+                "This game became widely known when it was mentioned in an article published by Scientific American in 1970. It consists of a collection of cells which, " +
+                "based on a few mathematical rules, can live, die or multiply. Depending on the initial conditions, the cells form various patterns throughout the course of the game.");
+        hc.rulesText.setText("Each cell with one or no neighbors dies, as if by solitude.\n\n\n" +
+                "Each cell with four or more neighbors dies, as if by overpopulation.\n\n\n" +
+                "Each cell with two or three neighbors survives.\n\n\n\n\n" +
+                "Each cell with three neighbors becomes populated.");
         stage.setAlwaysOnTop(true);
         stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("icon.png"))));
         stage.show();
@@ -99,6 +104,7 @@ public class ConwayController {
     }
 
     public void resetClicked(ActionEvent event) {
+        startStop.setText("Start");
         life.reset(startStop.getScene());
     }
 }

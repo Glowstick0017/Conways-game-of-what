@@ -11,8 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" styleClass="anchor"
-            stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.HelpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="541.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conway.HelpController">
     <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="114.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@icon.png" />
     </ImageView>
@@ -21,18 +20,51 @@
           <Font name="System Bold" size="24.0" />
         </font>
     </Label>
-    <Label layoutX="206.0" layoutY="85.0" text="Built by:" />
-    <ScrollPane layoutX="50.0" layoutY="160.0" prefHeight="200.0" prefWidth="440.0">
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="419.0" styleClass="scrollinternal">
-            <Text fx:id="textArea" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test" wrappingWidth="380.0" />
+    <Label layoutX="206.0" layoutY="94.0" text="Built by:" />
+    <ScrollPane fx:id="aboutPane" layoutX="50.0" layoutY="125.0" prefHeight="200.0" prefWidth="440.0">
+        <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="419.0" styleClass="scrollinternal">
+            <Text fx:id="aboutText" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test" wrappingWidth="380.0" />
         </AnchorPane>
     </ScrollPane>
-    <Hyperlink layoutX="270.0" layoutY="82.0" text="Glowstick" onAction="#glowstickClicked"/>
-    <MenuButton layoutX="50.0" layoutY="116.0" mnemonicParsing="false" text="MenuButton">
+    <ScrollPane fx:id="rulesPane" layoutX="50.0" layoutY="125.0" prefHeight="200.0" prefWidth="440.0" visible="false">
+        <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="419.0" styleClass="scrollinternal">
+            <Text fx:id="rulesText" fill="WHITE" layoutX="20.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="test" wrappingWidth="240.0" />
+         <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For a cell that is populated:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@solitude.png" />
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@overpopulation.png" />
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@survive.png" />
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="126.0" layoutX="273.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@born.png" />
+            </ImageView>
+         <Text fill="WHITE" layoutX="14.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For a space that is empty or unpopulated:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+        </AnchorPane>
+    </ScrollPane>
+    <ScrollPane fx:id="controlPane" layoutX="50.0" layoutY="125.0" prefHeight="200.0" prefWidth="440.0" visible="false">
+        <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="419.0" styleClass="scrollinternal">
+            <Text fx:id="controlsText" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a pattern from the               or make one yourself by clicking on the cells. The 'Start' button advances the game by several generations (each new generation corresponding to one iteration of the rules)." wrappingWidth="380.0" />
+        </AnchorPane>
+    </ScrollPane>
+    <Hyperlink fx:id="lexiconLink" layoutX="205.0" layoutY="137.0" onMouseClicked="#lexiconClick" text="Lexicon" textFill="#00aaf8" visible="false"/>
+    <Hyperlink layoutX="274.0" layoutY="91.0" onAction="#glowstickClicked" text="Glowstick" />
+    <MenuButton fx:id="menuButton" layoutX="50.0" layoutY="90.0" mnemonicParsing="false" text="About">
       <items>
-          <MenuItem mnemonicParsing="false" text="About" />
-          <MenuItem mnemonicParsing="false" text="Rules" />
-          <MenuItem mnemonicParsing="false" text="Controls" />
+          <MenuItem mnemonicParsing="false" onAction="#onAboutClick" text="About" />
+          <MenuItem mnemonicParsing="false" onAction="#onRulesClick" text="Rules" />
+          <MenuItem mnemonicParsing="false" onAction="#onControlsClick" text="Controls" />
       </items>
     </MenuButton>
 </AnchorPane>
